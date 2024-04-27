@@ -370,7 +370,7 @@ _│ ┊➺ 🎡 .ruletaban_
 
  `.trim()
  
-const img = ['https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg']
+const img = ['https://telegra.ph/file/498323a8c756a286aeeb6.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
@@ -389,4 +389,8 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+
+//https://telegra.ph/file/498323a8c756a286aeeb6.jpg  bellota
+
+//https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg aguaman
 
