@@ -10,6 +10,6 @@ mentions: [a, b]
 })}
 handler.help = ['formarpareja']
 handler.tags = ['main', 'fun']
-handler.command = ['formarpareja','formarparejas']
+handler.command = ['donarsala']
 handler.group = true
 export default handler
