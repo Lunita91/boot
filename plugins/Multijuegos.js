@@ -28,6 +28,12 @@ await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid }
 if (command == 'sinpito') {
 let juego = `_*${text.toUpperCase()}* *ES/IS* *${(100).getRandom()}%* *${command.replace('how', '').toUpperCase()},* *ASI CREE QUE LA TIENE GRANDE? 😂 XD*_`.trim()
 await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid } : {})}
+
+ // ------------------------------------------------------------------------------------------------------------------------------------------------
+  
+if (command == 'donarsala') {
+let juego = `_*${text.toUpperCase()}* *ES/IS* *${(100).getRandom()}%* *${command.replace('how', '').toUpperCase()},* le tocó donar una sala , bájate con todo lo que tengas`.trim()
+await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid } : {})}
   
 // ------------------------------------------------------------------------------------------------------------------------------------------------
   
@@ -79,6 +85,6 @@ await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid }
 }
 handler.help = ['lov2', 'cachuda', 'negra', 'adoptado', 'sintetas', 'sinpoto', 'sinpito', 'feo', 'cachudo', 'fea', 'negro', 'adoptada'].map(v => v + ' @tag | nombre')
 handler.tags = ['calculator']
-handler.command = /^love2|cachuda|adoptado|adoptada|sintetas|sinpoto|sinpito|feo|fea|cachudo|negro|negra/i
+handler.command = /^love2|cachuda|adoptado|donarsala|adoptada|sintetas|sinpoto|sinpito|feo|fea|cachudo|negro|negra/i
 handler.exp = 100
 export default handler
