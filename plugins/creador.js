@@ -13,9 +13,7 @@ let k = Math.floor(Math.random() * 70);
 let x = `${pickRandom(['ㅤ'])}`
 let l = Math.floor(Math.random() * x.length);
 let vn = ``
-let top = `*${x}
-*${text} ${x}*
- *${user(a)}* le tocó donar una sala , bájate con todo lo que tengas`
+let top = `*${user(a)}* le tocó donar una sala , bájate con todo lo que tengas`
 let txt = '';
 let count = 0;
 for (const c of top) {
@@ -32,7 +30,7 @@ for (const c of top) {
 conn.sendFile(m.chat, vn, '🏆ACERQUESE A RECLAMAR SU PREMIO🏅', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
-handler.help = handler.command = ['sorteo']
+handler.help = handler.command = ['donarsala']
 handler.tags = ['fun']
 handler.group = true
 handler.limit = 0
