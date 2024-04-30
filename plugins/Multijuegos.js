@@ -29,12 +29,7 @@ if (command == 'sinpito') {
 let juego = `_*${text.toUpperCase()}* *ES/IS* *${(100).getRandom()}%* *${command.replace('how', '').toUpperCase()},* *ASI CREE QUE LA TIENE GRANDE? 😂 XD*_`.trim()
 await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid } : {})}
 
- // ------------------------------------------------------------------------------------------------------------------------------------------------
-  
-if (command == 'donarsala') {
-let juego = `_*${text.toUpperCase()}* *ES/IS* *${(100).getRandom()}%* *${command.replace('how', '').toUpperCase()},* le tocó donar una sala , bájate con todo lo que tengas`.trim()
-await conn.reply(m.chat, juego, m, m.mentionedJid ? { mentions: m.mentionedJid } : {})}
-  
+
 // ------------------------------------------------------------------------------------------------------------------------------------------------
   
 if (command == 'sinpoto') {
