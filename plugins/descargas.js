@@ -20,7 +20,7 @@ const isCommand7 = /^(ytmp4doc|ytvdoc)$/i.test(command)
 const isCommand8 = /^(zz)$/i.test(command)
 const isCommand9 = /^(mediafire(dl)?|dlmediafire)$/i.test(command)
 const isCommand10 = /^(ytmax)$/i.test(command)
-const isCommand11 = /^(tkdl|tiktok)$/i.test(command)
+//const isCommand11 = /^(tkdl|tiktok)$/i.test(command)
 const isCommand12 = /^(ytmaxdoc)$/i.test(command)
 const isCommand13 = /^(dalle|openiamage|aiimage|aiimg|aimage|iaimagen|openaimage|openaiimage)$/i.test(command)
 const isCommand14 = /^(openjourney|journey|midjourney)$/i.test(command)
@@ -352,22 +352,7 @@ reportError(e)
 break
 
 //codigo adaptado por https://github.com/elrebelde21
-case isCommand11:
-if (!text) return conn.reply(m.chat, `${lenguajeGB['smsMalused2']()}\n*${usedPrefix + command} https://vm.tiktok.com/ZM2e66NBM/?t=1*`, m)
-if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) return conn.reply(m.chat, `${lenguajeGB['smsAvisoFG']()}*${lenguajeGB['smsYT6']()}*`, m)  
-try {
-const { author: { nickname }, video, description, audio } = await tiktokdl(args[0])
-.catch(async _ => await tiktokdlv2(args[0]))
-.catch(async _ => await tiktokdlv3(args[0]))
-const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
-await conn.reply(m.chat, `${lenguajeGB['smsAvisoEG']()}*${lenguajeGB['smsTiktok']()}*`, m)    
-await conn.sendFile(m.chat, url, 'tiktok.mp4', `
-💜 *${nickname}*`.trim(), m)
-await conn.sendMessage(m.chat, { audio: { url: url }, fileName: 'tiktok.mp3', mimetype: 'audio/mp4', ptt: false }, { quoted: m })     
-} catch (e) {
-reportError(e)
-}         
-break
+
    
 case isCommand12:
 if (!args[0]) return m.reply(lenguajeGB.smsMalused2() + `*${usedPrefix + command} https://youtu.be/ejemplo*\n*${usedPrefix + command} https://www.youtube.com/ejemplo*`)
