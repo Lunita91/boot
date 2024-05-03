@@ -31,7 +31,6 @@ let menu = `┏━━━━━━━━━━━━━━━━┓
 ┃ 𝙃𝙊𝙇𝘼 𝙅𝙀𝙁𝙀 *_YEIKO_*
 ┃ ¿𝙀𝙉 𝙌𝙐𝙀 𝙋𝙐𝙀𝘿𝙊 𝘼𝙔𝙐𝘿𝘼𝙍𝙏𝙀?
 ┃ @${m.sender.split("@")[0]}
-┃ 𝙎𝙊𝙔 𝙁𝙉 𝙀𝙎𝙋𝙊𝙍𝙏 🤖
 ┗━━━━━━━━━━━━
 ╔═════════════════╗
 ┇➤ .𝘨𝘶𝘪𝘢
@@ -366,7 +365,7 @@ let menu = `┏━━━━━━━━━━━━━━━━┓
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙
  `.trim()
  
-const img = ['https://telegra.ph/file/7762d40cf5c5bf2ddd0ab.jpg']
+const img = ['https://telegra.ph/file/498323a8c756a286aeeb6.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
