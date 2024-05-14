@@ -21,7 +21,7 @@ Error`;
 };
 handler.help = ["convertirhd"]
 handler.tags = ["ai"]
-handler.command = ["convertirhd"]
+handler.command = ["hdd"]
 
 export default handler;
 
