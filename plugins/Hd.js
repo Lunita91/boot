@@ -1,53 +1,65 @@
+import fs from "fs";
+import fetch from "node-fetch";
+import { srgan2x, srgan4x } from "super-resolution-scraper";
 import FormData from "form-data";
-import Jimp from "jimp";
 
-
-const handler = async (m, {conn, usedPrefix, command}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.herramientas_hd
-
- try {    
+let handler = async (m, { conn, usedPrefix, command, args }) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || q.mediaType || "";
-  if (!mime) throw `${tradutor.texto1} ${usedPrefix + command}*`;
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `${tradutor.texto2[0]} (${mime}) ${tradutor.texto2[1]}`;
-  m.reply(tradutor.texto3);
-  let img = await q.download?.();
-  let pr = await remini(img, "enhance");
-  conn.sendMessage(m.chat, {image: pr}, {quoted: m});
- } catch {
-  throw tradutor.texto4;
- }
+  if (!mime) throw "⚠️️ *_Responde a una imagen._*";
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `⚠️️ *Formato no soportado, asegurese que sea una imagen*`;
+  let media = await q.download(true);
+  let data = await uploadFile(media);
+  let url = data.files[0].url;
+  try {
+    let image = await srgan4x(url);
+    conn.sendFile(
+      m.chat,
+      image.result,
+      "out.png",
+      null,
+      m,
+      true,
+      {
+        contextInfo: {
+          forwardingScore: 200,
+          isForwarded: false,
+          externalAdReply: {
+            showAdAttribution: false,
+            title: botname,
+            body: `h`,
+            mediaType: 2,
+            sourceUrl: linkgc,
+            thumbnail: miniurl,
+          },
+          mentions: [m.sender],
+        },
+      },
+      { quoted: m }
+    );
+  } catch {
+    m.ftext("⚠️ *_Hubo un problema al cargar la imagen._*");
+  }
 };
-handler.help = ["remini", "hd", "enhance"];
-handler.tags = ["ai", "tools"];
-handler.command = ["remini", "hd", "enhance"];
+handler.help = ["hd *<image>*"];
+handler.tags = ["tools"];
+handler.command = ["hd"];
+handler.cookie = false;
+
 export default handler;
 
-async function remini(imageData, operation) {
-  return new Promise(async (resolve, reject) => {
-    const availableOperations = ["enhance", "recolor", "dehaze"];
-    if (availableOperations.includes(operation)) {
-      operation = operation;
-    } else {
-      operation = availableOperations[0];
-    }
-    const baseUrl = "https://inferenceengine.vyro.ai/" + operation + ".vyro";
-    const formData = new FormData();
-    formData.append("image", Buffer.from(imageData), {filename: "enhance_image_body.jpg", contentType: "image/jpeg"});
-    formData.append("model_version", 1, {"Content-Transfer-Encoding": "binary", contentType: "multipart/form-data; charset=utf-8"});
-    formData.submit({url: baseUrl, host: "inferenceengine.vyro.ai", path: "/" + operation, protocol: "https:", headers: {"User-Agent": "okhttp/4.9.3", Connection: "Keep-Alive", "Accept-Encoding": "gzip"}},
-      function (err, res) {
-        if (err) reject(err);
-        const chunks = [];
-        res.on("data", function (chunk) {chunks.push(chunk)});
-        res.on("end", function () {resolve(Buffer.concat(chunks))});
-        res.on("error", function (err) {
-        reject(err);
-        });
+async function uploadFile(path) {
+  let form = new FormData();
+  form.append("files[]", fs.createReadStream(path));
+  let res = await (
+    await fetch("https://uguu.se/upload.php", {
+      method: "post",
+      headers: {
+        ...form.getHeaders(),
       },
-    );
-  });
+      body: form,
+    })
+  ).json();
+  await fs.promises.unlink(path);
+  return res;
 }
