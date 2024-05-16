@@ -10,7 +10,7 @@ import Spotify from "spotifydl-x"
 
 let handler = async (m, { conn, text, usedPrefix, command, args }) => {
 let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, currentQuality
-const isCommand1 = /^(gimage|imagen?)$/i.test(command)
+//const isCommand1 = /^(gimage|imagen?)$/i.test(command)
 const isCommand2 = /^(play|play2)$/i.test(command)
 //const isCommand3 = /^(play2)$/i.test(command)
 const isCommand4 = /^(fgmp3|dlmp3|getaud|yt(a|mp3)?)$/i.test(command)
