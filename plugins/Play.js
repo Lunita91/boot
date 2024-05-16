@@ -11,6 +11,6 @@ conn.sendFile(m.chat, link, 'error.jpg', `*💞 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙
 handler.help = ['gimage <query>', 'imagen <query>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(gimage|image|imagen)$/i
-handler.exp = 20
-handler.money = 50
+handler.exp = 0
+handler.money = 0
 export default handler
