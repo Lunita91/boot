@@ -6,7 +6,7 @@ if (prohibited.some(word => m.text.toLowerCase().includes(word))) return m.reply
 const res = await googleImage(text)
 let image = res.getRandom()
 let link = image
-conn.sendFile(m.chat, link, 'error.jpg', `*💞 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤 | 𝙍𝙚𝙨𝙪𝙡𝙩: ${text}*`, m)
+conn.sendFile(m.chat, link, 'error.jpg', `*Esto fue lo que encontré.*`, m)
 }
 handler.help = ['gimage <query>', 'imagen <query>']
 handler.tags = ['internet', 'tools']
