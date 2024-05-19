@@ -365,7 +365,7 @@ let menu = `╔═════════════════╗
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙
  `.trim()
  
-const img = ['https://telegra.ph/file/498323a8c756a286aeeb6.jpg']
+const img = ['https://telegra.ph/file/4be624576f970e0e1a413.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
@@ -389,7 +389,7 @@ return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
 //https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg aguaman
 
-
+//https://telegra.ph/file/4be624576f970e0e1a413.jpg vix
 
 
 
