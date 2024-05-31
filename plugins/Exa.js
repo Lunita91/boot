@@ -37,7 +37,7 @@ if (!args[0]) throw `
 •𝗖𝗨𝗠𝗣𝗟𝗜𝗥 𝗖𝗢𝗡 𝗟𝗔𝗦 𝗥𝗘𝗚𝗟𝗔𝗦 𝗤𝗨𝗘 𝗦𝗘 𝗟𝗘𝗦 𝗗𝗔 𝗬 𝗘𝗦𝗧𝗔𝗥 10 𝗠𝗜𝗡𝗨𝗧𝗢𝗦 𝗔𝗡𝗧𝗘𝗦 ~EN DC~
 ` 
 }
-handler.command = /^(exagonal)$/i
+handler.command = /^(hexalista)$/i
 handler.register = false
 handler.group = true
 handler.admin = true
