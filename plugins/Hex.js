@@ -45,7 +45,7 @@ if (!args[0]) throw `
                
 ` 
 }
-handler.command = /^(hexalista)$/i
+handler.command = /^(cuadrilista)$/i
 handler.register = false
 handler.group = true
 handler.admin = true
