@@ -371,7 +371,7 @@ let menu = `╔═════════════════╗
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙
  `.trim()
  
-const img = ['https://telegra.ph/file/4be624576f970e0e1a413.jpg']
+const img = ['https://telegra.ph/file/12302e01eb40312c82401.png']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
@@ -398,7 +398,7 @@ return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 //https://telegra.ph/file/4be624576f970e0e1a413.jpg vix
 
 
-
+//https://telegra.ph/file/12302e01eb40312c82401.png ciber bot
 
 
 
