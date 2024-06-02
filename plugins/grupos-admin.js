@@ -247,7 +247,7 @@ break
   
 handler.command = /^(promote|daradmin|darpoder|demote|quitarpoder|quitaradmin|setwelcome|bienvenida|edit(?:ar)?wel(?:come)?|setbye|despedida|edit(?:ar)?(bye)?|setdesk|setdesc|newdesc|descripción|descripcion|cambiardesc|setname|newnombre|nuevonombre|cambiarnombre|cambiarpp|setpp(group|grup|gc)?|nuevolink|nuevoenlace|revoke|resetlink|kick|echar|hechar|sacar|ban|group|grupo|tagall|invocar|invocacion|todos|invocación|privar|deprive|add|agregar|invitar|invite|añadir)$/i
 handler.group = true
-handler.register = true
+handler.register = false
 handler.admin = true
 handler.botAdmin = true 
 
