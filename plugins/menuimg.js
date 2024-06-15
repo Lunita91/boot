@@ -400,7 +400,7 @@ return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
 //https://telegra.ph/file/12302e01eb40312c82401.png ciber bot
 
-
+//https://telegra.ph/file/b81b48988d75eab7d9e64.jpg nika
 
 
 
