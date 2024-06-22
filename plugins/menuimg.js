@@ -391,7 +391,7 @@ let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
-//https://telegra.ph/file/498323a8c756a286aeeb6.jpg  bellota
+//https://telegra.ph/file/498323a8c756a286aeeb6.jpg  bellotak
 
 //https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg aguaman
 
