@@ -167,10 +167,10 @@ global.dfail('admin', m, conn)
 return false
 }
 let pesan = args.join` `
-let oi = `» ❤️‍🔥 ${lenguajeGB['smsAddB5']()} ${pesan}`
+let oi = `» ⚙️ ${lenguajeGB['smsAddB5']()} ${pesan}`
 let teks = `${lenguajeGB['smstagaa']()}\n\n${oi}\n\n`
 for (let mem of participants) {
-teks += `➥🪻@${mem.id.split('@')[0]}\n`}
+teks += `➥👑@${mem.id.split('@')[0]}\n`}
 teks += ``
 await conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )    
 break
