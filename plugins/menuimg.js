@@ -370,7 +370,7 @@ let menu = `╔═════════════════╗
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙
  `.trim()
  
-const img = ['https://telegra.ph/file/12302e01eb40312c82401.png']
+const img = ['https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
@@ -390,13 +390,3 @@ let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
-//https://telegra.ph/file/498323a8c756a286aeeb6.jpg  bellotak
-
-//https://telegra.ph/file/7efee0ddae0b0a20910c9.jpg aguaman
-
-//https://telegra.ph/file/4be624576f970e0e1a413.jpg vix
-
-
-//https://telegra.ph/file/12302e01eb40312c82401.png ciber bot
-
-//https://telegra.ph/file/b81b48988d75eab7d9e64.jpg nika
