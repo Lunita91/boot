@@ -1,19 +1,21 @@
-var handler = async (m, { conn, participants, groupMetadata, args, text }) => {
-
-const pp = './src/4vs4clk.png'
-const groupAdmins = participants.filter(p => p.admin)
-const listaAdmins = groupAdmins.map((v, i) => ``).join('\n')
-const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
-if (!text) return m.reply(`Ingresa un horario`)
-if (text.length < 0) return m.reply(`⚙️ 𝗛𝗢𝗥𝗔𝗥𝗜𝗢 𝗠𝗔𝗟 𝗘𝗦𝗖𝗥𝗜𝗧𝗢, 𝗜𝗡𝗧𝗘𝗡𝗧𝗔 𝗗𝗘 𝗡𝗨𝗘𝗩𝗢.`)
-let mensaje = args.join` `
-let yo = `🕓 𝗛𝗢𝗥𝗔: *${text}*`
-let texto = `╭──────⚔──────╮
+import fg from 'api-dylux' 
+import fetch from 'node-fetch'
+import { savefrom, facebookdl, facebookdlv2 } from '@bochilteam/scraper'
+import fbDownloader from 'fb-downloader-scrapper'
+import { facebook } from "@xct007/frieren-scraper"
+import axios from 'axios'
+let handler = async (m, { conn, args, command, usedPrefix }) => {
+if (!args[0]) throw `
+╭──────⚔──────╮
 ㅤㅤㅤ4 𝐕𝐄𝐑𝐒𝐔𝐒 4
 ╰──────⚔──────╯
 ╭──────────────╮
-${yo}
-│➥ 𝐌𝐎𝐃𝐀𝐋𝐈𝐃𝐀𝐃: *CLK*
+│ㅤ *MODO*  : COMPE
+│ㅤ⏱ 𝐇𝐎𝐑𝐀𝐑𝐈𝐎 
+│ㅤ🇲🇽 𝐌𝐄𝐗 : 
+│ㅤ🇨🇴 𝐂𝐎𝐋 : 
+│➥ 𝐌𝐎𝐃𝐀𝐋𝐈𝐃𝐀𝐃: 
+│➥ 𝐉𝐔𝐆𝐀𝐃𝐎𝐑𝐄𝐒:
 │
 │     𝗘𝗦𝗖𝗨𝗔𝗗𝗥𝗔 
 │
@@ -25,13 +27,12 @@ ${yo}
 │ㅤʚ 𝐒𝐔𝐏𝐋𝐄𝐍𝐓𝐄:
 │⚜️ ➤ 
 │⚜️ ➤ 
-╰─────────────╯`.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', texto, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
-
+╰─────────────╯
+                
+` 
 }
-handler.help = ['admins']
-handler.tags = ['grupo']
-handler.command = /^(4x4|4vs4)$/i
+handler.command = /^(vs4|4vs4)$/i
+handler.register = true
 handler.group = true
-
+handler.admin = true
 export default handler
