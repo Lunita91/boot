@@ -8,7 +8,8 @@ export async function before(m, {conn, isAdmin, isBotAdmin, isOwner, isROwner}) 
   const chat = global.db.data.chats[m.chat];
   const bot = global.db.data.settings[this.user.jid] || {};
   if (bot.antiPrivate && !isOwner && !isROwner) {
-    await m.reply(`*𝐓𝐄 𝐂𝐀𝐈𝐒𝐓𝐄 𝐃𝐄 𝐋𝐀 𝐂𝐀𝐌𝐀 𝐃𝐄 𝐂𝐇𝐈𝐐𝐔𝐈𝐓@ ? 👀*\n\n*𝐍𝐨 𝐬𝐞𝐚𝐬 𝐞𝐬𝐩𝐞𝐬@.🖕🏻😡.*`, false, {mentions: [m.sender]});
+    await m.reply(`𝗧𝗘 𝗖𝗔𝗜𝗦𝗧𝗘 𝗗𝗘 𝗟𝗔 𝗖𝗔𝗠𝗔 𝗗𝗘 𝗖𝗛𝗜𝗤𝗨𝗜𝗧@ ..?? 👀
+𝙣𝙤 𝙨𝙚𝙖𝙨 𝙚𝙨𝙥𝙚𝙨@ 𝙣𝙞 𝙥𝙚𝙣𝙙𝙚𝙟@ 𝙉𝙊 𝙢𝙖𝙣𝙙𝙚𝙨 𝙢𝙨𝙟 😡🖕🏻`, false, {mentions: [m.sender]});
     await this.updateBlockStatus(m.chat, 'block');
   }
   return !1;
