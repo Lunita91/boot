@@ -947,7 +947,7 @@ global.db.data.chats[m.chat] = {}
 		
 if (chat) {
 if (!('isBanned' in chat)) chat.isBanned = false                    
-if (!('welcome' in chat)) chat.welcome = false                   
+if (!('welcome' in chat)) chat.welcome = true                  
 if (!('detect' in chat)) chat.detect = false                    
 if (!('sWelcome' in chat)) chat.sWelcome = ''                    
 if (!('sBye' in chat)) chat.sBye = ''                    
@@ -969,7 +969,7 @@ if (!('antiInstagram' in chat)) chat.antiInstagram = false
 if (!('antiTwitter' in chat)) chat.antiInstagram = false
 if (!('antifake' in chat)) chat.antifake = false  
 if (!('reaction' in chat)) chat.reaction = false  	
-if (!('viewonce' in chat)) chat.viewonce = true         
+if (!('viewonce' in chat)) chat.viewonce = false         
 if (!('modoadmin' in chat)) chat.modoadmin = false           
 if (!('antitoxic' in chat)) chat.antitoxic = false 
 if (!('nsfw' in chat)) chat.nsfw = true
@@ -980,7 +980,7 @@ if (!isNumber(chat.expired)) chat.expired = 0
 } else
 global.db.data.chats[m.chat] = {
 isBanned: false,
-welcome: false,
+welcome: true,
 detect: false,
 sWelcome: '',
 sBye: '',
@@ -1002,7 +1002,7 @@ antiInstagram: false,
 antiTwitter: false,
 antifake: false,
 reaction: true,	
-viewonce: true,
+viewonce: false,
 modoadmin: false,
 antitoxic: false,
 nsfw:true,
@@ -1017,7 +1017,7 @@ if (settings) {
 if (!('self' in settings)) settings.self = false
 if (!('autoread' in settings)) settings.autoread = true
 if (!('autoread2' in settings)) settings.autoread2 = true
-if (!('restrict' in settings)) settings.restrict = false
+if (!('restrict' in settings)) settings.restrict = true
 if (!('temporal' in settings)) settings.temporal = true
 if (!('antiPrivate' in settings)) settings.antiPrivate = true
 if (!('antiCall' in settings)) settings.antiCall = true
@@ -1028,7 +1028,7 @@ if (!('jadibotmd' in settings)) settings.jadibotmd = false
 self: false,
 autoread: true,
 autoread2: true,
-restrict: false,
+restrict: true,
 temporal: true,
 antiPrivate: true,
 antiCall: true,
