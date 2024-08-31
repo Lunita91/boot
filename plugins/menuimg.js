@@ -30,7 +30,7 @@ const horarioFecha = lugarFecha.format('dddd,DD [de] MMMM [del] YYYY│[Hora:]HH
 let menu = `╔═════════════════╗
 ┇➤ 𝙃𝙊𝙇𝘼, 𝙃𝙐𝙈𝘼𝙉𝙊 
 ┇ @${m.sender.split("@")[0]}
-╚═════════════════╝𝙎𝙞𝙨𝙠𝙚𝙙-𝘽𝙤𝙩
+╚══𝙇𝙐𝙉𝘼 𝘽𝙊𝙏
 ╔═════════════════╗
 ┇➤ .menu/.comandos
 ╚═════════════════╝
@@ -370,7 +370,7 @@ let menu = `╔═════════════════╗
 ╰ ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙ ∙ ∙
  `.trim()
  
-const img = ['https://telegra.ph/file/03d1e7fc24e1a72c60714.jpg']
+const img = ['https://telegra.ph/file/f263b795a9eb94bd7e6b1.jpg']
 await conn.sendMessage(m.chat, { image: { url: img.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak })
 	
 } catch (e) {
