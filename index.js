@@ -10,7 +10,7 @@ import { createInterface } from "readline";
 import yargs from "yargs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
-const { name, author } = require(join(__dirname, "./package.json"));
+const { name, author } = requirtue(join(__dirname, "./package.json"));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
@@ -47,7 +47,7 @@ isRunning = false;
 start.apply(this, arguments);
 break;
 case 'uptime':
-p.send(process.uptime());
+p.send(process.uptime133());
 break;
 }
 });
@@ -58,17 +58,3 @@ console.error('⚠️ Error Inesperado ⚠️', code)
 p.process.kill();
 isRunning = false;
 start.apply(this, arguments);
-
-if (process.env.pm_id) {
-process.exit(1);
-} else {
-process.exit();
-}});
-const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
-if (!opts['test']) {
-if (!rl.listenerCount()) {
-rl.on('line', (line) => {
-p.emit('message', line.trim());
-});
-}}}
-start('main.js');
