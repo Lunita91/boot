@@ -10,15 +10,15 @@ import { createInterface } from "readline";
 import yargs from "yargs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
-const { name, author } = requirtue(join(__dirname, "./package.json"));
+const { name, author } = require(join(__dirname, "./package.json"));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('SISKED\nBOT', {
+say('PROYECTO\nX', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Project Author:\n(@jeffomx15)\n\nColaborador:\nCLAN TOP ELITE`, {
+say(`Project Author:\n(Kevin Bustillos)\n\nColaborador:\nElite Bot Global`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']});
@@ -47,7 +47,7 @@ isRunning = false;
 start.apply(this, arguments);
 break;
 case 'uptime':
-p.send(process.uptime133());
+p.send(process.uptime());
 break;
 }
 });
@@ -58,3 +58,17 @@ console.error('⚠️ Error Inesperado ⚠️', code)
 p.process.kill();
 isRunning = false;
 start.apply(this, arguments);
+
+if (process.env.pm_id) {
+process.exit(1);
+} else {
+process.exit();
+}});
+const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+if (!opts['test']) {
+if (!rl.listenerCount()) {
+rl.on('line', (line) => {
+p.emit('message', line.trim());
+});
+}}}
+start('main.js');
