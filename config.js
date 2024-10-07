@@ -11,14 +11,14 @@ import { en, es, id, ar, pt, fr, hi } from "./lib/idiomas/total-idiomas.js"
 //⊱ ━━━━━.⋅ Añada los numeros a ser Propietario/a | Add the numbers to be Owner ⋅.━━━━ ⊰  
 
 global.owner = [
-["593993370003", '𝙇𝙐𝙉𝘼 𝘽𝙊𝙏', true], //Elitebot
-["593993370003"], 
-["593993370003"], 
-["573225761079"], 
-["593979133620"],
-["593993370003"],
-["584123989549"],
-["593993370003"]]
+["526122294403", '𝙇𝙐𝙉𝘼 𝘽𝙊𝙏', true], //Elitebot
+["526122294403"], 
+["526122294403"], 
+["51926956637"], 
+["51918425805"],
+["526122294403"],
+["525572409285"],
+["526122294403"]]
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -103,11 +103,8 @@ global.moment = moment;
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
 
 global.official = [ // Agregate si eres Owner
-["593958918542", 'Jeffo 💻', 1], 
-["593993370003", '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1],  
-["593993370003", '𝗖𝘂𝘀𝘁𝗼𝗺𝗲𝗿 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1],
-["593993370003", '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1],
-["593993370003", 'Prueba', 1]];
+["526122294403", 'Lunita 💻', 1], 
+["525572409285", '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1]];
 
 global.mail = ''; //agrega tú correo
 global.desc = ''; //agrega una descripción corta
@@ -115,35 +112,35 @@ global.desc2 = ''; //agrega una descripción larga (Solo se aplicará si su whas
 global.country = ''; //agrega tú país ejemplo: 🇪🇨
 
 global.packname = "𝙇𝙐𝙉𝘼 𝘽𝙊𝙏";
-global.author = "@Jeffomx15";
+global.author = "@yallico.owner";
 
 //⊱ ━━━━━.⋅ Versión | Nombre | cuentas ⋅.━━━━ ⊰
 
 global.vs = "𝙇𝙐𝙉𝘼 𝘽𝙊𝙏";
 global.vsJB = "2.0";
 
-global.gt = "𝙎𝙞𝙨𝙠𝙚𝙙-𝘽𝙤𝙩";
+global.gt = "𝙇𝙐𝙉𝘼 𝘽𝙊𝙏";
 global.yt = "";
 global.yt2 = "";
 global.ig = "";
 global.md = "";
 global.fb = "";
 
-global.nna = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //UPDATE 
-global.nn2 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //UPDATE 2
-global.nna2 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Help
-global.nn = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 1
-global.nnn = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 2
-global.nnnt = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 3
-global.nnntt = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 4
-global.nnnttt = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 5
-global.nnnttt1 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 6 COL
-global.nnnttt2 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 7 COL
-global.nnnttt3 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 8 COL
-global.nnnttt4 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //Grupo 9 COL
-global.nnnttt5 = 'https://whatsapp.com/channel/0029Vak6H9l3GJP4FJH5063R' //A.T.M.M
+global.nna = '' //UPDATE 
+global.nn2 = '' //UPDATE 2
+global.nna2 = '' //Help
+global.nn = '' //Grupo 1
+global.nnn = '' //Grupo 2
+global.nnnt = '' //Grupo 3
+global.nnntt = '' //Grupo 4
+global.nnnttt = '' //Grupo 5
+global.nnnttt1 = '' //Grupo 6 COL
+global.nnnttt2 = '' //Grupo 7 COL
+global.nnnttt3 = '' //Grupo 8 COL
+global.nnnttt4 = '' //Grupo 9 COL
+global.nnnttt5 = '' //A.T.M.M
 global.paypal = ''
-global.asistencia = 'Wa.me/593993370003' //Dudas? escríbeme...
+global.asistencia = 'Wa.me/526122294403' //Dudas? escríbeme...
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -177,13 +174,13 @@ global.exito = eg;
 
 //⊱ ━━━━━.⋅ Información | Information ⋅.━━━━ ⊰
 
-global.wm = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓 ";
-global.igfg = "𝙋𝙍𝙊𝙔𝙀𝘾𝙏𝙊 𝙓";
+global.wm = "𝙇𝙐𝙉𝘼 𝘽𝙊𝙏";
+global.igfg = "𝙇𝙐𝙉𝘼 𝘽𝙊𝙏";
 global.wait = "*🚀 P R O C E S A N D O*";
 global.waitt = "*🚀 P R O C E S A N D O*";
-global.waittt = "*🚀 P R O C E S A N D O*";
+global.waittt = "a*🚀 P R O C E S A N D O*";
 global.waitttt = "*🚀 P R O C E S A N D O*";
-global.nomorown = "593993684821";
+global.nomorown = "526122294403";
 global.pdoc = ["application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.ms-excel", "application/msword", "application/pdf", "text/rtf"];
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
