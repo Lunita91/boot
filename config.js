@@ -1,3 +1,4 @@
+
 import { watchFile, unwatchFile } from "fs"
 import chalk from "chalk"
 import { fileURLToPath } from "url"
@@ -28,7 +29,7 @@ global.botNumberCode = "" //Ejemplo: +59309090909
 global.confirmCode = ""
 
 global.mods = []
-global.prems = ["593993370003"]
+global.prems = ["526122294403"]
 //key de violetics
 global.Key360 = ["964f-0c75-7afc"]
    
@@ -104,7 +105,7 @@ global.moment = moment;
 
 global.official = [ // Agregate si eres Owner
 ["526122294403", 'Lunita 💻', 1], 
-["525572409285", '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1]];
+["526122294403", '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1]];
 
 global.mail = ''; //agrega tú correo
 global.desc = ''; //agrega una descripción corta
